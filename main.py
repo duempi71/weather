@@ -111,17 +111,17 @@ for row in data :
             timestamp: time.time(),
             temp: temp,
             aktuell: aktuell,
-            niederschlag: niederschlag;
+            niederschlag: niederschlag,
             art: art,
             wind: wind,
             boeen: booen,
             richtung: richtung
     }
 
-        wetter_sql= ("insert plz, timstamp, temp, aktuell, niederschlag, art, wind, boeen, richtung into wetter;")
-        db.execute(wetter_sql, wetter_data)
+    add_wetter= ("insert plz, timstamp, temp, aktuell, niederschlag, art, wind, boeen, richtung into wetter;")
+    db.execute(add_wetter, wetter_data)
 
-        next(line)
+    next(line)
     next(row)
 
 db.close()
